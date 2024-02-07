@@ -10,9 +10,7 @@ function PasswordReset(){
     const [emailValid, setEmailValid]= useState('')
     const [emailError, setEmailError]= useState('')
     function EmailCheck(){
-        console.log("SSS")
         if(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)){
-            console.log("YEAH")
             setEmailValid("Valid Email")
             setEmailError("")
         }
