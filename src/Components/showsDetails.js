@@ -22,9 +22,7 @@ function ShowsDetails(){
     const [episode, setEpisode] = useState(1)
     const [fetchSeason, setFetchSeason] = useState(1)
     const {id} = useParams()
-    console.log(id)
     const tvApi =`https://api.themoviedb.org/3/tv/${id}?api_key=c82ba3b3f317773b0956fd0c2ce5b8a0&language=en-US` 
-    console.log(id)
     const ShowFetch = debounce(() => {
         console.log('TV Show ID:', id);
         fetch(tvApi)
@@ -34,7 +32,6 @@ function ShowsDetails(){
         })
     },750);
     
-    console.log(tvshows)
     const posterUrl = `https://image.tmdb.org/t/p/original${tvshows.poster_path}`
     const backdropUrl = `https://image.tmdb.org/t/p/original${tvshows.backdrop_path}`
     const videoid = `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${season}&e=${episode}`
@@ -72,7 +69,6 @@ function ShowsDetails(){
     useEffect(()=>{
         EpisodeDetails()
     },[season,id])
-    console.log(fetchSeason)
 
     useEffect(()=>{
         ShowFetch()
@@ -88,7 +84,6 @@ function ShowsDetails(){
         const response = await fetch(CastUrl)
         const data = await response.json()
         setCast(data)
-        console.log(data)
     }
 
     useEffect(()=>{

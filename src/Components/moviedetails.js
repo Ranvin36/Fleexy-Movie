@@ -40,7 +40,6 @@ const MovieDetails = ()=>{
         const response = await fetch(CastUrl)
         const data = await response.json()
         setCast(data)
-        console.log(data)
         setDataLoading(false)
     }
 
@@ -51,7 +50,6 @@ const MovieDetails = ()=>{
             setFavourites((state)=> !state)
             favouritesUserDocuments(user,details)
             if(favourites){
-                console.log("CHECKED!!")
                 deleteFavouritesDocuments(user,details)
             }
         }else{

@@ -29,7 +29,6 @@ function ShowsPage(){
           setdataLoading(false)
         });
       }, 800);
-    console.log(genreMovies);
   
     useEffect(() => {
       GenreFetch();
@@ -57,7 +56,6 @@ function ShowsPage(){
     function handlePageChange(number) {
       setActivePage(number);
       GenreFetch();
-      console.log(number);
     }
   
     const YearFilter = (year)=>{

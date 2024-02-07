@@ -10,7 +10,6 @@ const Search = ({searchText, searchResult, setSearchResult})=>{
             .then(response => response.json())
             .then(data =>{
                 setSearchResult(data.results)
-                console.log(searchResult)
             })
         }
         catch(error){

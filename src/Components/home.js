@@ -23,6 +23,7 @@ const Home = () => {
   const [genres, setGenres] = useState([])
   const [findGenres, setFindGenres] = useState([])
   const [dataLoading, setDataLoading]=useState(false)
+  const width = window.innerWidth;
 
   const api = `https://api.themoviedb.org/3/genre/movie/list?&api_key=c82ba3b3f317773b0956fd0c2ce5b8a0&language=en`
 
@@ -95,19 +96,19 @@ const Home = () => {
   else{
     return (
       <div>
-        <div className='paddingSwiper'>
+        <div className={width<930?"paddingSwiper media-padding":"paddingSwiper"}>
           <h3>Coming Soon</h3>
           {soon}
         </div>
-        <div className='paddingSwiper'>
+        <div className={width<930?"paddingSwiper media-padding":"paddingSwiper"}>
             <h3>Popular</h3>
              {all}
         </div>
-        <div className='paddingSwiper'>
+        <div className={width<930?"paddingSwiper media-padding":"paddingSwiper"}>
             <h3>Trending Movies</h3>
              {result}
         </div>
-        <div className='paddingSwiper'>
+        <div className={width<930?"paddingSwiper media-padding":"paddingSwiper"}>
           <h3>Trending Tv-Shows</h3>
              {tvShow}
         </div>
