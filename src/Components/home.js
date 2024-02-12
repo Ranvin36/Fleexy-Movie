@@ -97,7 +97,7 @@ const Home = () => {
     return (
       <div>
         <div className={width<930?"paddingSwiper media-padding":"paddingSwiper"}>
-          <h3>Chamal PUTHA</h3>
+          <h3>ISULA & THASARA</h3>
           {soon}
         </div>
         <div className={width<930?"paddingSwiper media-padding":"paddingSwiper"}>
