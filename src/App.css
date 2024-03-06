@@ -600,17 +600,22 @@ body{background: rgb(32,36,60);
   transition: 0.5s;
 }
 
+
+
 .castDetails{
   margin-left: 10px;
   display: flex;
   margin-top: 10px;
   flex-direction: column;
   align-items: center;
+  max-width: 150px;
+
 }
 
 .castDetails p{
   color: #fff;
 }
+
 
 
 .container-hold{
