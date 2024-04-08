@@ -18,12 +18,11 @@ function SwiperMovies({watch ,index, text}){
         <div className=''>
             <Swiper 
               modules={[Pagination]}
-
-              onSlideChange={() => console.log("Changed")}
+              // onSlideChange={() => console.log("Changed")}
               spaceBetween={-10}
               slidesPerView={width >= 1300 ? 5 : width >= 1200 ? 4 : width >= 900 ? 3 : 1}
               pagination={{clickable:true}}
-              onSwiper={(swiper) => console.log(swiper)}
+              // onSwiper={(swiper) => console.log(swiper)}
               >
               
               

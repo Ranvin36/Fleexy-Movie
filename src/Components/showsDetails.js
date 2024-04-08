@@ -24,7 +24,6 @@ function ShowsDetails(){
     const {id} = useParams()
     const tvApi =`https://api.themoviedb.org/3/tv/${id}?api_key=c82ba3b3f317773b0956fd0c2ce5b8a0&language=en-US` 
     const ShowFetch = debounce(() => {
-        console.log('TV Show ID:', id);
         fetch(tvApi)
         .then(response => response.json())
         .then(data=>{
@@ -43,7 +42,6 @@ function ShowsDetails(){
 
     async function EpisodeDetails(){
         const FetchUrl = `https://api.themoviedb.org/3/tv/${id}/season/${season}?api_key=c82ba3b3f317773b0956fd0c2ce5b8a0&language=en-US`
-        console.log(FetchUrl)
         const response = await fetch(FetchUrl)
         const data = await response.json()
         setFetchSeason(data)
@@ -58,7 +56,6 @@ function ShowsDetails(){
             setFavourites((state)=> !state)
             favouritesUserDocuments(user,tvshows)
             if(favourites){
-                console.log("CHECKED!!")
                 deleteFavouritesDocuments(user,tvshows)
             }
         }else{

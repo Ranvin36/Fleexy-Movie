@@ -44,14 +44,12 @@ function MoviesPage(){
       function handlePageChange(number) {
         setActivePage(number);
         GenreFetch();
-        console.log(number,"HHHHHHH");
       }
 
       const MoviesDisplay = movieData && movieData.map((obj,i)=>(
         <Homeview movie={obj} index={i}/>
       ))
 
-      console.log(movieData)
 
       useEffect(()=>{
         GenreFetch()

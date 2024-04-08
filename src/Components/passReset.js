@@ -15,7 +15,6 @@ function PasswordReset(){
             setEmailError("")
         }
         else{
-            console.log("NOPE")
             setEmailError("Enter A Valid Email")
             setEmailValid("")
         }
@@ -28,7 +27,6 @@ function PasswordReset(){
                 
             }
             catch(error){
-                console.log(error,"HEY")
             }
 
         }
